@@ -16,6 +16,7 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 </head>
 <body>
 
+
 <!-- Links (sit on top) -->
 <div class="w3-top">
   <div class="w3-row w3-large w3-light-grey">
@@ -38,20 +39,20 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 
   <!-- Slideshow -->
   <div class="w3-container">
-    <div class="w3-display-container mySlides">
-      <img src="/img/bg.jpg" style="width:100%">
+    <div class="w3-display-container w3-center mySlides">
+      <img src="/img/bg.jpg" style="width:50%, heigh: 70%;">
       <div class="w3-display-topleft w3-container w3-padding-32">
         <!-- <span class="w3-white w3-padding-large w3-animate-bottom">Lorem ipsum</span> -->
       </div>
     </div>
-    <div class="w3-display-container mySlides">
-      <img src="/img/bg1.jpg" style="width:100%">
+    <div class="w3-display-container w3-center mySlides">
+      <img src="/img/bg1.jpg" style="width:50%, heigh: 70%;">
       <div class="w3-display-middle w3-container w3-padding-32">
         <!-- <span class="w3-white w3-padding-large w3-animate-bottom">Klorim tipsum</span> -->
       </div>
     </div>
-    <div class="w3-display-container mySlides">
-      <img src="/img/bg2.jpg" style="width:100%">
+    <div class="w3-display-container w3-center mySlides">
+      <img src="/img/bg2.jpg" style="width:50%, heigh: 70%;">
       <div class="w3-display-topright w3-container w3-padding-32">
         <!-- <span class="w3-white w3-padding-large w3-animate-bottom">Blorum pipsum</span> -->
       </div>
@@ -70,58 +71,76 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
     </div>
   </div>
 
-  <!-- Grid -->
-  <div class="w3-row w3-container">
-    <div class="w3-center w3-padding-64">
-      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Kami Melayani Panggilan 24 jam</span>
-    </div>
-    <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
-      <p>Kami  Melayani Anda dengan Berbagai Macam layanan Seperti : Duplikat Kunci, Service Kunci, Kunci Immobilizer, Kunci mobil, Kunci motor, Keyless Motor, Ganti Remote, Casing, Brankas, Laci, Loker, filing Kabinet, Pintu, Rolling Door, Kunci Gembok, Kunci Rumah, Program Chip Immobilizer, Bikin Anak Kunci yang hilang, Kunci macet, Kunci patah, Service, dan berbagai macam jenis, dan jasa lainnya yang hubungan dengan Kunci.</p>
+
+
+  <div class="w3-center w3-padding-64">
+    <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Kami Melayani Panggilan 24 jam</span>
+  </div>
+
+  <div class="w3-container w3-center w3-light-grey-bg">
+    <div class="w3-section">
+      <p class="w3-large">Kami Melayani Anda dengan Berbagai Macam layanan Seperti : Duplikat Kunci, Service Kunci, Kunci Immobilizer, Kunci mobil, Kunci motor, Keyless Motor, Ganti Remote, Casing, Brankas, Laci, Loker, filing Kabinet, Pintu, Rolling Door, Kunci Gembok, Kunci Rumah, Program Chip Immobilizer, Bikin Anak Kunci yang hilang, Kunci macet, Kunci patah, Service, dan berbagai macam jenis, dan jasa lainnya yang hubungan dengan Kunci.</p>
     </div>
   </div>
 
   <style>
-  /* Style for the image gallery */
-  .w3-row-padding {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px; /* Adjust the distance between images */
-  }
+    /* Style for the image gallery */
+    .w3-row-padding {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px; /* Adjust the distance between images */
+    }
 
-  .w3-col {
-    flex: 0 0 100%; /* 100% width, one image per row */
-    padding: 8px;
-  }
+    .w3-col {
+      flex: 0 0 100%; /* 100% width by default (1 image per row) */
+      padding: 8px;
+    }
 
-  .w3-gallery-image {
-    width: 100%;
-    border-radius: 20px;
-  }
-</style>
+    /* Use media query to have 2 images per row on larger screens (e.g., tablets and above) */
+    @media (min-width: 768px) {
+      .w3-col {
+        flex: 0 0 calc(50% - 16px); /* 50% width (2 images per row) with a gap of 16px between them */
+      }
+    }
+
+    .w3-gallery-image:first-child {
+       margin-top: 20px; /* Add spacing for the first image */
+     }
+
+    .w3-gallery-image {
+      width: 100%;
+      height: 500px; /* Set a fixed height for the images */
+      object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+      border-radius: 20px;
+    }
+
+    .w3-light-grey-bg {
+      background-color: #f1f1f1;
+      padding: 16px; /* Add some padding to the background */
+    }
+  </style>
 
   <!-- Image Gallery -->
   <div class="w3-row-padding">
-    <div class="w3-col s12 m6 l4">
+    <div class="w3-col s6 m6">
       <img src="img/bg1.jpg" class="w3-gallery-image w3-hover-opacity">
     </div>
-    <div class="w3-col s12 m6 l4">
+    <div class="w3-col s6 m6">
       <img src="img/bg2.jpg" class="w3-gallery-image w3-hover-opacity">
     </div>
-    <div class="w3-col s12 m6 l4">
+    <div class="w3-col s6 m6">
       <img src="img/bg3.jpg" class="w3-gallery-image w3-hover-opacity">
     </div>
-    <div class="w3-col s12 m6 l4">
+    <div class="w3-col s6 m6">
       <img src="img/bg4.jpg" class="w3-gallery-image w3-hover-opacity">
     </div>
-    <div class="w3-col s12 m6 l4">
+    <div class="w3-col s6 m6">
       <img src="img/bg5.jpg" class="w3-gallery-image w3-hover-opacity">
     </div>
-    <div class="w3-col s12 m6 l4">
+    <div class="w3-col s6 m6">
       <img src="img/bg6.jpg" class="w3-gallery-image w3-hover-opacity">
     </div>
   </div>
-
-
   <!-- Contact -->
   <div class="w3-center w3-padding-64" id="contact">
     <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Kontak Kami</span>
@@ -205,35 +224,45 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
   </div>
 
 
-<script>
-// Slideshow
-var slideIndex = 1;
-showDivs(slideIndex);
+  <script>
+  // Slideshow
+  var slideIndex = 1;
+  showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demodots");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+  // Function to change slide automatically every 500 ms
+  function autoChangeSlide() {
+    plusDivs(1);
+    setTimeout(autoChangeSlide, 1000);
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-white", "");
+
+  // Start the automatic slideshow
+  autoChangeSlide();
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
   }
-  x[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " w3-white";
-}
-</script>
+
+  function currentDiv(n) {
+    showDivs(slideIndex = n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demodots");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length};
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" w3-white", "");
+    }
+    x[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " w3-white";
+  }
+  </script>
+
 
 </body>
 </html>
