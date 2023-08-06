@@ -9,6 +9,7 @@ header {
   background-color: #333;
   color: #fff;
   padding: 20px;
+  text-align: center;
 }
 
 main {
@@ -22,4 +23,29 @@ footer {
   color: #fff;
   padding: 10px;
   text-align: center;
+}
+
+/* Floating Button */
+.floating-button-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.floating-button {
+  width: 50px;
+  height: 50px;
+  background-color: #25D366; /* Warna WhatsApp */
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.floating-button.telepon {
+  background-color: #34B7F1; /* Warna Telepon */
 }
